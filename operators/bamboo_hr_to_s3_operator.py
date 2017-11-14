@@ -10,29 +10,23 @@ import json
 class BambooHRToS3Operator(BaseOperator):
     """
       S3 To Redshift Operator
-          :param bamboo_conn_id:          The destination redshift connection id.
-          :type bamboo_conn_id:           string
-
-          :param company name:            The company data is being requested for
-                                          - goes before the endpoint in the URL.
-          :type redshift_schema:          string
-
-          :param method:                  The endpoint from which data is being
-                                          requested.
-          :type table:                    string
-
-          :param s3_conn_id:              The source s3 connection id.
-          :type s3_conn_id:               string
-
-          :param s3_bucket:               The source s3 bucket.
-          :type s3_bucket:                string
-
-          :param s3_key:                  The source s3 key.
-          :type s3_key:                   string
-
-          :param payload:                 Additional parameters you're making in
-                                          the request.
-          :type payload:                  string
+          :param bamboo_conn_id:    The destination redshift connection id.
+          :type bamboo_conn_id:     string
+          :param company_name:      The company data is being requested for
+                                    - goes before the endpoint in the URL.
+          :type company_name:       string
+          :param method:            The endpoint from which data is being
+                                    requested.
+          :type method:             string
+          :param s3_conn_id:        The source s3 connection id.
+          :type s3_conn_id:         string
+          :param s3_bucket:         The source s3 bucket.
+          :type s3_bucket:          string
+          :param s3_key:            The source s3 key.
+          :type s3_key:             string
+          :param payload:           Additional parameters you're making in
+                                    the request.
+          :type payload:            string
 
       """
     template_fields = ('s3_key')
